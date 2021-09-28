@@ -20,12 +20,24 @@ const cliente = {
         this.saldo += valor
     }
 }
-let msg = ''
+
+/*
 for (info in cliente){
     if(info === 'dependentes'){
-        const dependente = cliente[info]
-        msg += `Olha percebi que você tem ${dependente.length} dependentes, que tal fazer um seguro?`
+        msg += `Olha percebi que você tem ${cliente[info].length} dependentes, que tal fazer um seguro?`
     }
-}
+}*/
 
-console.log(msg)
+function oferecerseguro(client){
+    
+    const dadosclientes = Object.keys(client)
+    if(dadosclientes.includes('dependentes')){
+        console.log(`Oi ${client.nome}, percebi que você tem ${client['dependentes'].length} dependentes, que tal fazer um seguro de vida?`)
+    }
+    /*const k = Object.keys(client)
+    k.forEach(chave => chave==='dependentes' ? msg += `Olha percebi que você tem ${client[chave].length} dependentes, que tal fazer um seguro?` : '')*/
+}
+oferecerseguro(cliente)
+
+const arraydaora = Object.values(cliente)
+console.log(arraydaora[5])
