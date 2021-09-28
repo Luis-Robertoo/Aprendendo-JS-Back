@@ -29,4 +29,6 @@ for (let info in cliente){
         relatorio += `${info}: ${cliente[info]} \n`
     }
 }
+
+//alteraçao teste git
 console.log(relatorio)
